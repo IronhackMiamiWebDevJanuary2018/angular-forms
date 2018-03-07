@@ -22,6 +22,10 @@ export class QuoteItemComponent implements OnInit, OnDestroy, OnChanges {
 
   constructor() { }
 
+  onQuoteDelete () {
+    this.onDelete.emit(this.theQuote.id);
+  }
+
   ngOnInit() {
     console.log('ngOnInit: quote-item component');
   }
